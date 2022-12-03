@@ -1,0 +1,20 @@
+%observacion del muestreo de una señal SENO
+close all
+clear all
+clc
+ts=0.05;%periodo entre muestras
+t=1;%duración de la señal
+f=4;
+a=1;
+n=t/ts;%muestras totales
+fs=88;%freq muestreo
+t=0:1/fs:t;
+%t=1/fs:1/fs:t;%vector de tiempo
+
+s1=sin(2*pi*t*f)+a;%creacion de seno
+figure('Name','Onda discreta')
+stem(t,s1)%discretizacion funcion pedestal
+%s2=sin(2*pi*t*f);%creacion de nueva onda seno
+figure('Name','Onda continua')
+plot(t,s1)%resultado
+% s1=sin(2*pi*tiempo*frecuencia+amplitud)
